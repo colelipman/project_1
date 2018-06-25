@@ -13,18 +13,18 @@
   <!-- //// Nav bar ///// -->
   <nav class="navbar sticky-top navbar-dark bg-dark">
     <a class="navbar-brand" href="index.html">Big Night Out</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-   <span class="navbar-toggler-icon"></span>
- </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+
+    <div class="navbar-header" id="navbarSupportedContent">
+      <ul class="nav navbar-nav ">
         <li class="nav-item active">
-          <a class="nav-link" href="https://www.ticketmaster.com/">Ticketmaster</a>
+          <a class="nav-link navbar-brand" href="https://www.ticketmaster.com/">Ticketmaster</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.zomato.com/">Zomato</a>
+        <li class="nav-item active">
+          <a class="nav-link navbar-brand" href="https://www.zomato.com/">Zomato</a>
         </li>
+      </ul>
+    </div>
   </nav>
 
   <!-- ///jumbotron //// -->
@@ -44,19 +44,20 @@
         <form>
           <div class="form-group">
             <label for="formGroupExampleInput">City</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Where You're Trying to Go">
+            <input type="text" class="form-control" id="userCity" placeholder="Where You're Trying to Go">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Genre</label>
-            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="What Music You're Feeling">
+            <input type="date" class="form-control" id="userDate">
           </div>
+          <input type="submit" class="btn btn-info" value="Submit">
         </form>
       </div>
 
       <!--Zomato Form Goes Here  -->
       <div class="col">
         <h1>Zomato</h1>
-        <form>
+        <!-- <form>
           <div class="form-group">
             <label for="formGroupExampleInput">Example label</label>
             <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input">
@@ -65,20 +66,24 @@
             <label for="formGroupExampleInput2">Another label</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input">
           </div>
-        </form>
+          <input type="submit" class="btn btn-info" value="Submit">
+        </form> -->
+        <div class="widget_wrap" style="width:320px;height:500px;display:inline-block;"><iframe src="https://www.zomato.com/widgets/res_search_widget.php?city_id=3897&language_id=1&theme=red&hideCitySearch=on&widgetType=small&sort=popularity" style="position:relative;width:100%;height:100%;" border="0" frameborder="0"></iframe></div>
       </div>
     </div>
 
     <!-- /////Results Go Here////// -->
-    <div class="container text-center">
+    <div class="container text-center" id="results">
       <h2>Your Night Out</h2>
     </div>
 
 </body>
 
 <!-- /////////// Javascript/////////// -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<!-- <script src="jquery-3.3.1.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+<script src="javascript/app.js"></script>
 
 </html>
