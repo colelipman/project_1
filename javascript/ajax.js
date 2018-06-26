@@ -40,10 +40,6 @@ event.preventDefault();
           console.log(venueArray);
           console.log(urlLink);
         }
-          // for (var j=0; j < venueArray.length; j++){
-          //   var venueName
-          //}
-
           var ticketTable = $("<table style='width: 100%'>");
           ticketTable.attr("id","ticket-table");
 
@@ -66,44 +62,3 @@ event.preventDefault();
       });
     });
   });
-
-  // creating a div that holds the results
-//           var ourDiv = $("<div>");
-//
-//           // Getting the title from the ajax call then append it to the results
-//           var title = $("<p>");
-//           title.append("<b>Event Name: </b>" + results[i].title);
-//           ourDiv.append(title, "<hr>");
-//           console.log(title);
-//
-//
-//           // getting the date and time from the call and appending it to the results
-//           var dateAndTime = $("<p>");
-//           dateAndTime.append("<hr>", "<b>Date & Time: </b>" + results[i].datetime_local);
-//           ourDiv.append(dateAndTime);
-//
-//
-//           // getting the venue name and appending it to the results
-//           var venueName = $("<p>");
-//           venueName.append("<b>Venue Name: </b>" + results[i]._embedded.venues[0].name);
-//           ourDiv.append(venueName); console.log(venueName);
-//
-//           var venueAddress = $("<p>");
-//           venueAddress.append("<b>Venue Address: </b>" + results[i].venue.address + ", " + results[i].venue.extended_address);
-//           ourDiv.append(venueAddress);
-//
-//           // getting the prices and appending them to the results
-//           var pricesRange = $("<p>");
-//           pricesRange.append("Lowest Price: $" + results[i].stats.lowest_price, "<br>");
-//           pricesRange.append("average Price: $" + results[i].stats.average_price, "<br>");
-//           pricesRange.append("highest Price: $" + results[i].stats.highest_price);
-//           ourDiv.append(pricesRange);
-//
-//
-//           // getting the ticket url and appending it to the results as an embeded link in a text
-//           var ticketUrl = $("<p>");
-//           ticketUrl.append("<a href=" + "'" + results[i].url + "'" + ">" + "<b> Get Your Ticket Now! </b>" + "</a>", "<hr>");
-//           ourDiv.append(ticketUrl);
-// console.log(ourDiv);
-//           // showing our results on the page
-//           $("#results-div").append(ourDiv);
