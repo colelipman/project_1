@@ -19,6 +19,7 @@ event.preventDefault();
       var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=5&startDateTime=" + startDateTimeAjax +
                       "&city=" + cityAjax + "&apikey=tb4GUiGrLAFXaXdMFqqWdf1IMN71PGCa";
 
+
       // Creating the Ajax call for the API ticketmaster
       $.ajax({
         url: queryURL,
