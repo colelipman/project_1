@@ -5,8 +5,6 @@ $(document).ready(function() {
   // Event Handler to pull the event API when clicking the submit button
 $("#submit").on("click", function() {
 event.preventDefault();
-      $(".resultShow").show();
-      $(".directionShow").show();
 
       //Creating a variable that holds the city and then get the value entered
       var cityAjax = $("#userCity").val().trim();
@@ -26,7 +24,7 @@ event.preventDefault();
         method: "GET"
       }).then(function(tmResponse) {
         // empty the result so each time it loads with new results and not putting them over each other
-        $("#results-div").empty();
+        $("#beer-results-div").empty();
         console.log(tmResponse);
         // creating a variable that holds the events
         var results = tmResponse._embedded.events ;
@@ -39,7 +37,7 @@ event.preventDefault();
           console.log(eventName);
           console.log(venueArray);
           console.log(urlLink);
-        }
+}
           var ticketTable = $("<table style='width: 100%'>");
           ticketTable.attr("id","ticket-table");
 
