@@ -7,8 +7,7 @@ var beerCity = $("#userCity").val().trim();
 var beerKey = "3a7c1ef8f44a55116b5152dcb81665fa" ;
 var beerQueryURL = "http://beermapping.com/webservice/loccity/ "
                     + beerKey + "/" + beerCity + "&s=json" ;
-
-console.log(beerCity);
+//console.log(beerCity);
 
 /////// Beer AJAX ///////
 $.ajax({
