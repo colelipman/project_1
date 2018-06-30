@@ -56,7 +56,7 @@ background-size: cover;
             <label class="text-center">Date</label>
             <input type="date" class="form-control text-center" id="userDate">
           </div>
-          <input type="submit" class="btn btn-info" id="submit" value="Submit">
+          <input type="submit" class="btn btn-info" id="submit" value="Submit" data-toggle="modal">
         </form>
       </div>
     </div>
@@ -103,6 +103,22 @@ background-size: cover;
   <div class="mx-auto footer text-center sticky-bottom" style='background: #e3f2fd '>
     <p2> Project 1 ©</p2>
   </div>
+
+  <div class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Incomplete</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Please make sure you entered city and date correctly.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 
