@@ -8,16 +8,28 @@
   <title>BIG NIGHT OUT</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 </head>
+<style>
+.jumbotron{
+      background-image: url("images/banner.jpg");
+      height: 300px;
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+        color: white;
+        text-shadow: black 0.3em 0.3em 0.3em;
+    }
+  </style>
 
 <body>
   <!-- //// Nav bar ///// -->
   <nav class="navbar sticky-top navbar-light" style='background: #e3f2fd '>
     <a class="navbar-brand list-group-item" href="index.html">Big Night Out</a>
 
-      <ul class="nav">
-        <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.ticketmaster.com/">Ticketmaster</a></li>
-        <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.zomato.com/">Zomato</a></li>
-      </ul>
+    <ul class="nav">
+      <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.ticketmaster.com/">Ticketmaster</a></li>
+      <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.zomato.com/">Zomato</a></li>
+    </ul>
 
   </nav>
 
@@ -49,44 +61,48 @@
       </div>
     </div>
 
-      <div class="row">
-        <div class="col">
-          <!-- /////TM Results Go Here////// -->
-          <div class="container text-center" id="tm-results-div">
-            <h2>Find An Event</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th class="col" style="width:33%">Event Name</th>
-                  <th class="col" style="width:33%">Venue</th>
-                  <th class="col" style="width:33%">Ticket URL</th>
-                </tr>
-              </thead>
-              <tbody id=ticket-table>
-              </tbody>
-            </table>
-          </div>
-</div>
-
-          <!-- /////Beer Results Go Here////// -->
-          <div class="col">
-          <div class="container text-center" id="beer-results-div">
-            <h2>Grab A Beer</h2>
-            <table>
-              <thead>
-                <tr>
-                  <th class="col" style="width:33%">Bar Name</th>
-                  <th class="col" style="width:33%">Map It Out</th>
-                  <th class="col" style="width:33%">Phone #</th>
-                </tr>
-              </thead>
-              <tbody id=beer-table>
-              </tbody>
-            </table>
-          </div>
+    <div class="row">
+      <div class="col">
+        <!-- /////TM Results Go Here////// -->
+        <div class="container text-center" id="tm-results-div">
+          <h2>Find An Event</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col" style="width:33%">Event Name</th>
+                <th class="col" style="width:33%">Venue</th>
+                <th class="col" style="width:33%">Ticket URL</th>
+              </tr>
+            </thead>
+            <tbody id=ticket-table>
+            </tbody>
+          </table>
+        </div>
       </div>
+
+      <!-- /////Beer Results Go Here////// -->
+      <div class="col">
+        <div class="container text-center" id="beer-results-div">
+          <h2>Grab A Beer</h2>
+          <table>
+            <thead>
+              <tr>
+                <th class="col" style="width:33%">Bar Name</th>
+                <th class="col" style="width:33%">Map It Out</th>
+                <th class="col" style="width:33%">Phone #</th>
+              </tr>
+            </thead>
+            <tbody id=beer-table>
+            </tbody>
+          </table>
+        </div>
       </div>
     </div>
+  </div>
+
+  <div class="mx-auto footer text-center sticky-bottom" style='background: #e3f2fd '>
+    <p2> Project 1 ©</p2>
+  </div>
 
 </body>
 
