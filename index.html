@@ -7,38 +7,38 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>BIG NIGHT OUT</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
 </head>
-<style>
-.jumbotron{
-      background-image: url("images/banner.jpg");
-      height: 300px;
-background-attachment: fixed;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-        color: white;
-        text-shadow: black 0.3em 0.3em 0.3em;
-    }
-  </style>
-
-<body>
+<!--Ticketmaster/Beermap background logos-->
+<body background="images/test.jpg">
   <!-- //// Nav bar ///// -->
-  <nav class="navbar sticky-top navbar-light" style='background: #e3f2fd '>
-    <a class="navbar-brand list-group-item" href="index.html">Big Night Out</a>
-
-    <ul class="nav">
-      <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.ticketmaster.com/">Ticketmaster</a></li>
-      <li class="nav-item"><a class="nav-link list-group-item" style="color:black" href="https://www.zomato.com/">Zomato</a></li>
-    </ul>
-
+  
+  <nav class="navbar sticky-top navbar-light navbar-inverse" style='background: black '>
+    <!--// To make "Big Night Out" align to right --> 
+    <a href="#" class="brand-logo"> </a>
+      <div class="pull-right">
+          <ul class="nav pull-right">
+              <li class="dropdown-right"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Big Night Out</a>
+    <!-- Links to tickets/main site -->             
+       <ul class="dropdown-menu">
+        <li class="nav-item"><a style="color:black" href="https://www.ticketmaster.com/">Ticketmaster</a></li>
+        <li class="nav-item"><a style="color:black" href="http://beermapping.com">Beer Mapping Project</a></li>
+      </ul>
+    </div>
+         </ul>  
+              </li>
   </nav>
 
   <!-- ///jumbotron //// -->
   <div class="jumbotron jumbotron-fluid">
     <div class="container">
-      <h1 class="display-4 text-center">Easily plan your out night.</h1>
+      <h1 class="display-4 text-center">Easily plan your night out.</h1>
     </div>
   </div>
+  
+</br>
 
   <!--containers for ticketmaster and zomato  -->
   <div class="container text-center">
@@ -56,71 +56,66 @@ background-size: cover;
             <label class="text-center">Date</label>
             <input type="date" class="form-control text-center" id="userDate">
           </div>
-          <input type="submit" class="btn btn-info" id="submit" value="Submit" data-toggle="modal">
+          <input type="submit" class="btn btn-info" id="submit" value="Submit">
         </form>
       </div>
     </div>
 
-    <div class="row">
-      <div class="col">
-        <!-- /////TM Results Go Here////// -->
-        <div class="container text-center" id="tm-results-div">
-          <h2>Find An Event</h2>
-          <table>
-            <thead>
-              <tr>
-                <th class="col" style="width:33%">Event Name</th>
-                <th class="col" style="width:33%">Venue</th>
-                <th class="col" style="width:33%">Ticket URL</th>
-              </tr>
-            </thead>
-            <tbody id=ticket-table>
-            </tbody>
-          </table>
-        </div>
-      </div>
+      <div class="row">
+        <div class="col">
+          <!-- /////TM Results Go Here////// -->
+          <div class="container text-center" id="tm-results-div">
+            <h2>Find An Event</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th class="col" style="width:33%">Event Name</th>
+                  <th class="col" style="width:33%">Venue</th>
+                  <th class="col" style="width:33%">Ticket URL</th>
+                </tr>
+              </thead>
+              <tbody id=ticket-table style="color: white;">
+              </tbody>
+            </table>
+          </div>
+</div>
 
-      <!-- /////Beer Results Go Here////// -->
-      <div class="col">
-        <div class="container text-center" id="beer-results-div">
-          <h2>Grab A Beer</h2>
-          <table>
-            <thead>
-              <tr>
-                <th class="col" style="width:33%">Bar Name</th>
-                <th class="col" style="width:33%">Map It Out</th>
-                <th class="col" style="width:33%">Phone #</th>
-              </tr>
-            </thead>
-            <tbody id=beer-table>
-            </tbody>
-          </table>
-        </div>
+          <!-- /////Beer Results Go Here////// -->
+          <div class="col">
+          <div class="container text-center" id="beer-results-div">
+            <h2>Grab A Beer</h2>
+            <table>
+              <thead>
+                <tr>
+                  <th class="col" style="width:33%">Bar Name</th>
+                  <th class="col" style="width:33%">Map It Out</th>
+                  <th class="col" style="width:33%">Phone #</th>
+                </tr>
+              </thead>
+              <tbody id=beer-table style="color: white;">
+              </tbody>
+            </table>
+          </div>
+      </div>
       </div>
     </div>
-  </div>
 
-  <div class="mx-auto footer text-center sticky-bottom" style='background: #e3f2fd '>
-    <p2> Project 1 ©</p2>
-  </div>
-
-  <div class="modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+<!-- Modal small -->
+<div class="modal fade bd-example-modal-sm" id="myModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Incomplete</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        <p>Please make sure you entered city and date correctly.</p>
-      </div>
+      Please make sure all fields are filled before submitting.
+      <i class="em em-woman-tipping-hand"></i>
     </div>
   </div>
 </div>
 
 </body>
+
+<!--FOOTER-->
+<div class="footer">
+        <p2> Project 1 ©</p2>
+</div>
 
 <!-- /////////// Javascript/////////// -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -130,5 +125,7 @@ background-size: cover;
 
 <script src="javascript/ajax.js"></script>
 <script src="javascript/beer.js"></script>
+
+
 
 </html>

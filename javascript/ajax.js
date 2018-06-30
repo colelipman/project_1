@@ -10,12 +10,12 @@ event.preventDefault();
       var cityAjax = $("#userCity").val().trim();
           //console.log(cityAjax);
       // Creating a variable that holds the datetime and then get the value enetered
-      var startDateTimeAjax = $("#userDate").val().trim() + "T00:00:00Z";
-          console.log("Date Entry: " + startDateTimeAjax);
+      var startDateTimeAjax = $("#userDate").val().trim() + "T12:00:00Z";
+          //console.log(startDateTimeAjax);
       // Creating the callback queryURL based on the parameters eneterd
-      var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=5&startDateTime=" + startDateTimeAjax + "&endDateTime=" + startDateTimeAjax +
+      var queryURL = "https://app.ticketmaster.com/discovery/v2/events.json?size=5&startDateTime=" + startDateTimeAjax +
                       "&city=" + cityAjax + "&apikey=tb4GUiGrLAFXaXdMFqqWdf1IMN71PGCa";
-      console.log(queryURL);
+
 
       // Creating the Ajax call for the API ticketmaster
       $.ajax({
@@ -43,7 +43,19 @@ event.preventDefault();
 
         });
       });
-      
-})
-};
     });
+
+    $('#submit').on('click', function () {
+      console.log("submit")
+      var city = $('#userCity').val().trim();
+      var date = $('#userDate').val().trim();
+      if ( city ==="" || date ==="" ){
+        console.log('HEllo')
+        $('#myModal').modal('toggle')
+
+      }
+    })
+    // <$("closeModalButton").on("click", function () {
+    //  $("#myModal").modal("hide")
+
+  
